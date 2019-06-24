@@ -40,7 +40,7 @@ format_string = "Swizzle<T, %i[0], %i[1]> %n[0]%n[1];"
 ## Examples
 ### Generate all permutations of vector swizzles 
 
-To perform shader-style swizzles with c++ requires some templates and leg-work.. here are all the generated swizzles of a vec4 to a vec2.
+To perform shader-style swizzles with c++ requires some templates and leg-work.. here are all the generated c++ templated declarations of a vec4 to a vec2 swizzle.
 
 ```
 Swizzle<T, 0, 0> xx;
