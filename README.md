@@ -6,10 +6,39 @@ Generates permutation combinations for all inputs.
 
 ```shell
 cargo build
-./permute <filename list>
+./permute input_file.toml
 ```
 
-## Generate all permutations of vector swizzles 
+## Defining Inputs
+
+Toml is used define inputs which will permutations can be generated from:
+
+```toml
+channels = [[ 
+    {name = "x", index = 0}, 
+    {name = "y", index = 1}, 
+    {name = "z", index = 2}, 
+    {name = "w", index = 3}, 
+], [ 
+    {name = "x", index = 0}, 
+    {name = "y", index = 1}, 
+    {name = "z", index = 2}, 
+    {name = "w", index = 3}, 
+]]
+```
+
+Supply an array of channels, each element is called an option.
+
+You can specify a string which will be formatted on output:
+
+```toml
+format_string = "Swizzle<T, %i[0], %i[1]> %n[0]%n[1];"
+```
+
+%i replaces with option index and %n replaces with the option name, the array "[1]" syntax is to select which channel the option comes from.
+
+## Examples
+### Generate all permutations of vector swizzles 
 
 To perform shader-style swizzles with c++ requires some templates and leg-work.. here are all the generated swizzlws of a vec4 to a vec2.
 
