@@ -42,7 +42,7 @@ format_string = "Swizzle<T, %i[0], %i[1]> %n[0]%n[1];"
 
 To perform shader-style swizzles with c++ requires some templates and leg-work.. here are all the generated swizzlws of a vec4 to a vec2.
 
-```shell
+```
 Swizzle<T, 0, 0> xx;
 Swizzle<T, 0, 1> xy;
 Swizzle<T, 0, 2> xz;
