@@ -11,7 +11,7 @@ cargo build
 
 ## Defining Inputs
 
-Toml is used define inputs which will permutations can be generated from:
+Toml is used define inputs which permutations can be generated from:
 
 ```toml
 channels = [[ 
