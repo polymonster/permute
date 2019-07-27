@@ -20,4 +20,4 @@ channels = [[
     {name = "w", index = 3}, 
 ]]
 
-format_string = "Swizzle<T, %i[0], %i[1], %i[2], %i[3]> %n[0]%n[1]%n[2]%n[3];"
+format_string = "Swizzle<T, 4, %d, %i[0], %i[1], %i[2], %i[3]> %n[0]%n[1]%n[2]%n[3]; \\"

@@ -51,6 +51,16 @@ fn permute(result: Vec<Option>, channels: Vec<Vec<Option>>, format: &String)
         // format string
         let mut output = format.clone();
         let mut cnt = 0;
+        let mut duplicate = 0;
+        for n in 0..result.len() {
+            for l in 0..result.len() {
+                if n != l && result[n].index == result[l].index {
+                    duplicate = 1;
+                    break;
+                }
+            }
+        }
+        output = output.replace("%d", &duplicate.to_string());
         for res in result.iter() {
             let searchi = format!("%i[{}]", cnt.to_string());
             let replacei: &str = &res.index.to_string()[..]; 
