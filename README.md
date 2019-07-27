@@ -37,6 +37,8 @@ format_string = "Swizzle<T, %i[0], %i[1]> %n[0]%n[1];"
 
 %i replaces with option index and %n replaces with the option name, the array "[1]" syntax is to select which channel the option comes from.
 
+%d will be replaced with 0 if none of the indexes in the result are duplicated, 1 if there are duplicates in the result.
+
 ## Examples
 ### Generate all permutations of vector swizzles 
 
