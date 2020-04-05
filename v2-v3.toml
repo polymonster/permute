@@ -1,0 +1,12 @@
+channels = [[ 
+    {name = "x", index = 0}, 
+    {name = "y", index = 1},
+], [ 
+    {name = "x", index = 0}, 
+    {name = "y", index = 1},
+], [ 
+    {name = "x", index = 0}, 
+    {name = "y", index = 1},
+]]
+
+format_string = "Swizzle<T, 3, %d, %i[0], %i[1], %i[2]> %n[0]%n[1]%n[2]; \\"
