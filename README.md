@@ -42,12 +42,10 @@ Supply an array of map of channels, each element is called an option, you can th
 
 `format_string` allows you specify a string which will be formatted on output:
 
-%i replaces with option index and %n replaces with the option name, the array "[1]" syntax is to select which channel the option comes from.
+`%i` replaces with option index and `%n` replaces with the option name, the array `%i[1]` syntax is to select which channel the option comes from. `%d` will be replaced with 0 if none of the indices in the result are duplicated, 1 if there are duplicates in the result.
 
-%d will be replaced with 0 if none of the indexes in the result are duplicated, 1 if there are duplicates in the result.
-
-`ignore_duplicates` ensure each element inside the permutation is unique.
-`include_least_index` allows you to select permuatation combination containing element that is this value or greater
+`ignore_duplicates` ensure each element inside the permutation is unique.  
+`include_least_index` allows you to select permuatation combination containing element that is this value or greater.
 
 ## Examples
 ### Generate all permutations of vector swizzles 
