@@ -1,0 +1,95 @@
+{
+    "channel_map": {
+        "v3-v2": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ]
+        ],
+
+        "v4-v2": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ]
+        ],
+
+        "v4-v3": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ]
+        ]
+    },
+    
+    "outputs": [
+        {
+            "channels": "v3-v2",
+            "format_string": "fn %n[0]%n[1](self) -> Vec2<T>;", 
+            "ignore_duplicates": false,
+            "include_least_index": 2
+        },
+        {
+            "channels": "v3-v2",
+            "format_string": "fn set_%n[0]%n[1](&mut self, other: Vec2<T>);", 
+            "ignore_duplicates": true,
+            "include_least_index": 2
+        },
+        {
+            "channels": "v3-v2",
+            "format_string": "fn %n[0]%n[1](self) -> Vec2<T> {\n    Vec2::new(self.%n[0], self.%n[1])\n}\n", 
+            "ignore_duplicates": false,
+            "include_least_index": 2
+        },
+        {
+            "channels": "v3-v2",
+            "format_string": "fn set_%n[0]%n[1](&mut self, other: Vec2<T>) {\n    self.%n[0] = other.x; self.%n[1] = other.y;\n}\n", 
+            "ignore_duplicates": true,
+            "include_least_index": 2
+        },
+        {
+            "channels": "v4-v2",
+            "format_string": "fn %n[0]%n[1](self) -> Vec2<T>;", 
+            "ignore_duplicates": false,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v2",
+            "format_string": "fn set_%n[0]%n[1](&mut self, other: Vec2<T>);", 
+            "ignore_duplicates": true,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v2",
+            "format_string": "fn %n[0]%n[1](self) -> Vec2<T> {\n    Vec2::new(self.%n[0], self.%n[1])\n}\n", 
+            "ignore_duplicates": false,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v2",
+            "format_string": "fn set_%n[0]%n[1](&mut self, other: Vec2<T>) {\n    self.%n[0] = other.x; self.%n[1] = other.y;\n}\n", 
+            "ignore_duplicates": true,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v3",
+            "format_string": "fn %n[0]%n[1]%n[2](self) -> Vec3<T>;", 
+            "ignore_duplicates": false,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v3",
+            "format_string": "fn set_%n[0]%n[1]%n[2](&mut self, other: Vec3<T>);", 
+            "ignore_duplicates": true,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v3",
+            "format_string": "fn %n[0]%n[1]%n[2](self) -> Vec3<T> {\n    Vec3::new(self.%n[0], self.%n[1], self.%n[2])\n}\n", 
+            "ignore_duplicates": false,
+            "include_least_index": 3
+        },
+        {
+            "channels": "v4-v3",
+            "format_string": "fn set_%n[0]%n[1]%n[2](&mut self, other: Vec3<T>) {\n    self.%n[0] = other.x; self.%n[1] = other.y; self.%n[2] = other.z;\n}\n", 
+            "ignore_duplicates": true,
+            "include_least_index": 3
+        }
+    ]
+}
+

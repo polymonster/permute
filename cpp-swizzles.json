@@ -1,0 +1,115 @@
+{
+    "channel_map": {
+        "v2-v2": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ]
+        ],
+
+        "v2-v3": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ]
+        ],
+
+        "v2-v4": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1} ]
+        ],
+
+        "v3-v2": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ]
+        ],
+
+        "v3-v3": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ]
+        ],
+
+        "v3-v4": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2} ]
+        ],
+    
+        "v4-v2": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ]
+        ],
+    
+        "v4-v3": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ]
+        ],
+
+        "v4-v4": [
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ], 
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ],
+            [ {"name": "x", "index": 0}, {"name": "y", "index": 1}, {"name": "z", "index": 2}, {"name": "w", "index": 3} ]
+        ]
+        
+    },
+
+    "outputs": [
+        {
+            "channels": "v2-v2",
+            "format_string": "Swizzle<T, 2, %d, %i[0], %i[1]> %n[0]%n[1];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v2-v3",
+            "format_string": "Swizzle<T, 3, %i[0], %i[1], %i[2]> %n[0]%n[1]%n[2];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v2-v4",
+            "format_string": "Swizzle<T, 4, %i[0], %i[1], %i[2], %i[3]> %n[0]%n[1]%n[2]%n[3];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v3-v2",
+            "format_string": "Swizzle<T, 2, %d, %i[0], %i[1], (size_t)-1> %n[0]%n[1];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v3-v3",
+            "format_string": "Swizzle<T, 3, %d, %i[0], %i[1], %i[2]> %n[0]%n[1]%n[2];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v3-v4",
+            "format_string": "Swizzle<T, 4, %i[0], %i[1], %i[2], %i[3]> %n[0]%n[1]%n[2]%n[3];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v4-v2",
+            "format_string": "Swizzle<T, 2, %d, %i[0], %i[1], size_t(-1), size_t(-1)> %n[0]%n[1];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v4-v3",
+            "format_string": "Swizzle<T, 3, %d, %i[0], %i[1], %i[2], size_t(-1), size_t(-1)> %n[0]%n[1]%n[2];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        },
+        {
+            "channels": "v4-v4",
+            "format_string": "Swizzle<T, 4, %d, %i[0], %i[1], %i[2], %i[3]> %n[0]%n[1]%n[2]%n[3];", 
+            "ignore_duplicates": false,
+            "include_least_index": 0
+        }
+    ]
+}
