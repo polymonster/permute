@@ -70,3 +70,50 @@ Swizzle<T, 3, 1> wy;
 Swizzle<T, 3, 2> wz;
 Swizzle<T, 3, 3> ww;
 ```
+
+Here is some generated output of swizzles in rust.
+
+```
+fn xw(self) -> Vec2<T>;
+fn yw(self) -> Vec2<T>;
+fn zw(self) -> Vec2<T>;
+fn wx(self) -> Vec2<T>;
+fn wy(self) -> Vec2<T>;
+fn wz(self) -> Vec2<T>;
+fn ww(self) -> Vec2<T>;
+
+fn set_xw(&mut self, other: Vec2<T>);
+fn set_yw(&mut self, other: Vec2<T>);
+fn set_zw(&mut self, other: Vec2<T>);
+fn set_wx(&mut self, other: Vec2<T>);
+fn set_wy(&mut self, other: Vec2<T>);
+fn set_wz(&mut self, other: Vec2<T>);
+
+fn xw(self) -> Vec2<T> {
+    Vec2::new(self.x, self.w)
+}
+
+fn yw(self) -> Vec2<T> {
+    Vec2::new(self.y, self.w)
+}
+
+fn zw(self) -> Vec2<T> {
+    Vec2::new(self.z, self.w)
+}
+
+fn wx(self) -> Vec2<T> {
+    Vec2::new(self.w, self.x)
+}
+
+fn wy(self) -> Vec2<T> {
+    Vec2::new(self.w, self.y)
+}
+
+fn wz(self) -> Vec2<T> {
+    Vec2::new(self.w, self.z)
+}
+
+fn ww(self) -> Vec2<T> {
+    Vec2::new(self.w, self.w)
+}
+```
