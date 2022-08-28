@@ -6,7 +6,7 @@ Generates permutation combinations for all inputs.
 
 ```shell
 cargo build
-./permute input_file.toml
+./permute input_file.json
 ```
 
 ## Defining Inputs
